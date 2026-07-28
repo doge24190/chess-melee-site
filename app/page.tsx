@@ -1,18 +1,10 @@
+import GifCarousel from "./GifCarousel";
+
 const mechanics = [
   { n: "2", title: "连 · 淘汰", text: "移动基础棋形成二连，挤掉两端没有普通同伴保护的敌棋。灵魂既不会被挤掉，也无法提供保护。", tone: "blue" },
   { n: "3", title: "连 · 召子", text: "组成三连，召唤一枚特殊棋进入棋篮。下一次落子必须优先使用，奖励也会改变你的计划。", tone: "gold" },
   { n: "4", title: "连 · 抉择", text: "组成四连，在全局消灭任意敌方非灵魂棋，或复活、补充一枚己方棋之间作出选择。", tone: "violet" },
   { n: "5", title: "连 · 飞升", text: "五连及以上让线上的基础棋化为灵魂。每枚灵魂记 1 分，同时成为永久占据棋盘的地形。", tone: "red" },
-];
-
-const gallery = [
-  ["03-battle.jpeg", "棋盘战局", "四种颜色的棋子在同一片草地棋盘上争夺空间。"],
-  ["04-three.jpeg", "三连召子", "连线奖励进入棋篮，下一次落子优先使用。"],
-  ["05-four.jpeg", "四连抉择", "杀敌或复活，让一次连线影响整张棋盘。"],
-  ["07-action.jpeg", "连锁变化", "移动、吃子与连线让每回合都重塑局面。"],
-  ["08-board.jpeg", "残局博弈", "空格越少，每一次落子越需要权衡。"],
-  ["09-piece.jpeg", "特殊棋机动", "借用象棋与国际象棋的移动直觉。"],
-  ["10-piece.jpeg", "空间布局", "用阵型、路线与阻挡为下一次连线铺路。"],
 ];
 
 export default function Home() {
@@ -76,15 +68,11 @@ export default function Home() {
       </section>
 
       <section className="gallery-section" id="gallery">
-        <div className="gallery-heading"><div><p className="section-kicker">实机游戏画面</p><h2>每一局，都有自己的故事</h2></div><p>以下画面均为游戏原始截图，未经裁剪或修改。</p></div>
-        <div className="gallery">
-          {gallery.map(([src, title, text], index) => (
-            <figure className={index === 0 ? "gallery-large" : ""} key={src}>
-              <img src={`/screenshots/${src}`} alt={title} width={640} height={360} />
-              <figcaption><b>{title}</b><span>{text}</span></figcaption>
-            </figure>
-          ))}
+        <div className="gallery-heading">
+          <div><p className="section-kicker">实机游戏画面</p><h2>每一回合，都在改变战局</h2></div>
+          <p>四段实机动图自动轮播，也可以手动切换查看。</p>
         </div>
+        <GifCarousel />
       </section>
 
       <section className="modes" id="modes">
