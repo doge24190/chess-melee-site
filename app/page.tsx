@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const mechanics = [
   { n: "2", title: "连 · 淘汰", text: "移动基础棋形成二连，挤掉两端没有普通同伴保护的敌棋。灵魂既不会被挤掉，也无法提供保护。", tone: "blue" },
   { n: "3", title: "连 · 召子", text: "组成三连，召唤一枚特殊棋进入棋篮。下一次落子必须优先使用，奖励也会改变你的计划。", tone: "gold" },
@@ -39,7 +37,7 @@ export default function Home() {
         </div>
         <div className="hero-visual">
           <div className="sun" /><div className="float float-a">♟</div><div className="float float-b">♜</div>
-          <div className="hero-frame"><Image src="/screenshots/01-menu.jpeg" alt="举棋不定游戏主菜单" width={640} height={360} priority /></div>
+          <div className="hero-frame"><img src="/screenshots/01-menu.jpeg" alt="举棋不定游戏主菜单" width={640} height={360} /></div>
           <div className="hero-note"><i /> 每一步，都是取舍</div>
         </div>
       </section>
@@ -58,7 +56,7 @@ export default function Home() {
       </section>
 
       <section className="feature-band" id="pieces">
-        <div className="feature-image"><Image src="/screenshots/02-tutorial.jpeg" alt="游戏教程介绍王棋移动" width={640} height={360} /></div>
+        <div className="feature-image"><img src="/screenshots/02-tutorial.jpeg" alt="游戏教程介绍王棋移动" width={640} height={360} /></div>
         <div className="feature-copy">
           <p className="section-kicker light">熟悉的棋子，全新的战场</p><h2>借一步棋，<br />打开一条新路线</h2>
           <p>将、士、象、车、马、炮、卒与皇保留鲜明的移动直觉，却不再围绕“将死”作战。它们会直接吃子、参与连线，并在阵亡后等待四连复活。</p>
@@ -82,7 +80,7 @@ export default function Home() {
         <div className="gallery">
           {gallery.map(([src, title, text], index) => (
             <figure className={index === 0 ? "gallery-large" : ""} key={src}>
-              <Image src={`/screenshots/${src}`} alt={title} width={640} height={360} />
+              <img src={`/screenshots/${src}`} alt={title} width={640} height={360} />
               <figcaption><b>{title}</b><span>{text}</span></figcaption>
             </figure>
           ))}
@@ -95,7 +93,7 @@ export default function Home() {
           <p>从本地 AI、同屏双人到在线匹配，你和对手始终使用同一套规则。教程模式则用 14 个入口带你掌握每一种机制。</p>
           <ul><li><span>✓</span> 三种棋盘规模：9×9 / 14×14 / 19×19</li><li><span>✓</span> 蓝方先手，双方交替行动</li><li><span>✓</span> 灵魂分数决定最终胜负</li></ul>
         </div>
-        <div className="modes-image"><Image src="/screenshots/06-modes.jpeg" alt="游戏模式选择页面" width={640} height={360} /></div>
+        <div className="modes-image"><img src="/screenshots/06-modes.jpeg" alt="游戏模式选择页面" width={640} height={360} /></div>
       </section>
 
       <section className="final-cta"><p>棋盘已经展开</p><h2>下一步，由你决定。</h2><a className="button primary" href="#top">回到顶部 <b>↑</b></a></section>
