@@ -66,9 +66,9 @@ export default function Home() {
           <article><b>05</b><h3>灵魂</h3><p>它既是最终分数，也是无法移动、无法消灭的永久地形。</p></article>
         </div>
         <div className="strategy-shots" aria-label="策略实机预览">
-          <figure className="strategy-shot"><div><img src="/screenshots/05-four.jpeg" alt="四连抉择实机预览" width={640} height={359} /></div><figcaption><b>05</b><span>四连 · 抉择</span></figcaption></figure>
-          <figure className="strategy-shot"><div><img src="/screenshots/07-action.jpeg" alt="连锁变化实机预览" width={640} height={359} /></div><figcaption><b>07</b><span>连锁 · 变化</span></figcaption></figure>
-          <figure className="strategy-shot"><div><img src="/screenshots/08-board.jpeg" alt="残局博弈实机预览" width={640} height={359} /></div><figcaption><b>08</b><span>残局 · 博弈</span></figcaption></figure>
+          <figure className="strategy-shot"><div><img src="/screenshots/05-four.jpeg" alt="四连抉择实机预览" width={640} height={359} /></div></figure>
+          <figure className="strategy-shot"><div><img src="/screenshots/07-action.jpeg" alt="连锁变化实机预览" width={640} height={359} /></div></figure>
+          <figure className="strategy-shot"><div><img src="/screenshots/08-board.jpeg" alt="残局博弈实机预览" width={640} height={359} /></div></figure>
         </div>
       </section>
 
