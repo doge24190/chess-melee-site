@@ -57,7 +57,7 @@ export default function Home() {
         <p>短线负责战斗，中线争夺资源，长线决定分数。真正的高手，会为下一次连线提前数步布局。</p>
         <div className="strategy-shots intro-shots" aria-label="连线机制实机预览">
           <figure className="strategy-shot"><div><img src="/screenshots/04-three.jpeg" alt="三连召子实机预览" width={640} height={359} /></div></figure>
-          <figure className="strategy-shot"><div><img src="/screenshots/03-battle.jpeg" alt="棋盘战局实机预览" width={640} height={359} /></div></figure>
+          <figure className="strategy-shot"><div><img src="/screenshots/05-four.jpeg" alt="四连抉择实机预览" width={640} height={359} /></div></figure>
         </div>
       </section>
 
@@ -88,7 +88,7 @@ export default function Home() {
           <article><b>05</b><h3>灵魂</h3><p>它既是最终分数，也是无法移动、无法消灭的永久地形。</p></article>
         </div>
         <div className="strategy-shots" aria-label="策略实机预览">
-          <figure className="strategy-shot"><div><img src="/screenshots/05-four.jpeg" alt="四连抉择实机预览" width={640} height={359} /></div></figure>
+          <figure className="strategy-shot"><div><img src="/screenshots/03-battle.jpeg" alt="棋盘战局实机预览" width={640} height={359} /></div></figure>
           <figure className="strategy-shot"><div><img src="/screenshots/08-board.jpeg" alt="残局博弈实机预览" width={640} height={359} /></div></figure>
         </div>
       </section>
