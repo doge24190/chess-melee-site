@@ -16,13 +16,13 @@ export default function DownloadPage() {
           <div className="download-options" aria-label="下载地址">
             <a className="download-option github-source" href="https://github.com/TechJoiH/Chess-Melee-Demo/releases/tag/v0.1.0" target="_blank" rel="noreferrer">
               <img src="/github-mark.png" alt="" width={36} height={36} aria-hidden="true" />
-              <span><b>GitHub Releases</b><small>项目发布页与版本说明</small></span><strong aria-hidden="true">↗</strong>
+              <span><b>GitHub Releases</b><small>项目发布页</small></span><strong aria-hidden="true">↗</strong>
             </a>
             <a className="download-option cloud-source" href="https://doge24190.lanzout.com/ibs8I3zbodah" target="_blank" rel="noreferrer">
               <i aria-hidden="true">云</i><span><b>云盘下载</b><small>通过云盘获取试玩包</small></span><strong aria-hidden="true">↗</strong>
             </a>
             <a className="download-option backup-source" href="https://www.doge24190.top/_media/0/chess-melee-demo-v0.1.0-windows-x64.zip" target="_blank" rel="noreferrer">
-              <i aria-hidden="true">备</i><span><b>备用下载</b><small>直接下载 Windows x64 压缩包</small></span><strong aria-hidden="true">↓</strong>
+              <i aria-hidden="true">备</i><span><b>备用下载</b><small>直接下载试玩包</small></span><strong aria-hidden="true">↓</strong>
             </a>
           </div>
           <p className="download-note">下载完成后解压文件，并按照压缩包内说明启动游戏。</p>
