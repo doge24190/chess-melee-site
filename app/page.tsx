@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <header className="nav">
         <a className="brand" href="#top" aria-label="举棋不定首页"><span className="brand-mark">棋</span><span>举棋不定</span></a>
-        <nav aria-label="主要导航"><a href="#mechanics">核心玩法</a><a href="#pieces">棋子系统</a><a href="#gallery">游戏画面</a></nav>
+        <nav aria-label="主要导航"><a href="#awards">赛事荣誉</a><a href="#mechanics">核心玩法</a><a href="#pieces">棋子系统</a><a href="#gallery">游戏画面</a></nav>
         <a className="nav-cta" href="/download">下载试玩</a>
       </header>
 
@@ -31,6 +31,24 @@ export default function Home() {
           <div className="sun" /><div className="float float-a">♟</div><div className="float float-b">♜</div>
           <div className="hero-frame"><img src="/screenshots/01-menu.jpeg" alt="举棋不定游戏主菜单" width={640} height={360} /></div>
           <div className="hero-note"><i /> 每一步，都是取舍</div>
+        </div>
+      </section>
+
+      <section className="awards" id="awards">
+        <div className="awards-heading">
+          <p className="section-kicker light">AWARDS &amp; RECOGNITION</p>
+          <h2>赛事荣誉</h2>
+          <p>从校园赛场到创新舞台，《举棋不定》的玩法创意获得了专业赛事认可。</p>
+        </div>
+        <div className="awards-grid">
+          <a className="award-card award-bronze" href="https://guanghe.qq.com/lightspeedjam/winwork" target="_blank" rel="noreferrer">
+            <div className="award-medal"><span>2026</span><b>铜</b></div>
+            <div className="award-copy"><small>高校赛道 · 铜奖作品</small><h3>光子游戏大赛</h3><p>以独特的连线战术、棋子机动与空间博弈，从高校赛道中脱颖而出。</p><strong>查看获奖作品 <i>↗</i></strong></div>
+          </a>
+          <article className="award-card award-finalist">
+            <div className="award-medal"><span>2026</span><b>星</b></div>
+            <div className="award-copy"><small>创新赛道 · 入围作品</small><h3>指尖星图游戏创新大赛</h3><p>凭借融合传统棋类直觉与连线机制的原创设计，成功入围赛事评选。</p><strong>入围作品 <i>✦</i></strong></div>
+          </article>
         </div>
       </section>
 
