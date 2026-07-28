@@ -70,7 +70,6 @@ export default function Home() {
       <section className="gallery-section" id="gallery">
         <div className="gallery-heading">
           <div><p className="section-kicker">实机游戏画面</p><h2>每一回合，都在改变战局</h2></div>
-          <p>四段实机动图自动轮播，也可以手动切换查看。</p>
         </div>
         <GifCarousel />
       </section>
