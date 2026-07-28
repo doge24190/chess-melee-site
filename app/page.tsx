@@ -106,7 +106,7 @@ export default function Home() {
         <div className="modes-image"><img src="/screenshots/06-modes.jpeg" alt="游戏模式选择页面" width={640} height={360} /></div>
       </section>
 
-      <section className="final-cta"><p>棋盘已经展开</p><h2>下一步，由你决定。</h2><a className="button primary" href="#top">回到顶部 <b>↑</b></a></section>
+      <section className="final-cta"><p>棋盘已经展开</p><h2>下一步，由你决定。</h2><a className="button primary" href="/download">下载试玩 <b>↵</b></a></section>
       <footer><div className="brand"><span className="brand-mark">棋</span><span>举棋不定</span></div><p>一款关于连线、取舍与空间的双人策略游戏。</p><a href="#top">返回顶部 ↑</a></footer>
     </main>
   );
