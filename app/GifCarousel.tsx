@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 const slides = [
   { src: "/screenshots/1.gif", title: "落子与布局", text: "在不断变化的棋盘上，为下一次连线提前铺路。" },
-  { src: "/screenshots/2.gif", title: "移动与交锋", text: "移动已有棋子，打破阵型并争夺关键空间。" },
-  { src: "/screenshots/3.gif", title: "连线与抉择", text: "不同长度的连线，会触发完全不同的战术效果。" },
+  { src: "/screenshots/3.gif", title: "移动与交锋", text: "移动已有棋子，打破阵型并争夺关键空间。" },
+  { src: "/screenshots/2.gif", title: "连线与抉择", text: "不同长度的连线，会触发完全不同的战术效果。" },
   { src: "/screenshots/4.gif", title: "灵魂与胜负", text: "让基础棋飞升为灵魂，把优势转化为最终分数。" },
 ];
 
