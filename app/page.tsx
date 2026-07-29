@@ -38,7 +38,7 @@ export default function Home() {
         <div className="awards-heading">
           <p className="section-kicker light">AWARDS &amp; RECOGNITION</p>
           <h2>赛事荣誉</h2>
-          <p>从校园赛场到创新舞台，《举棋不定》的玩法创意获得了专业赛事认可。</p>
+          <p>从校园赛场、创新舞台到行业展会，《举棋不定》的玩法创意获得了专业赛事与玩家认可。</p>
         </div>
         <div className="awards-grid">
           <a className="award-card award-bronze" href="https://guanghe.qq.com/lightspeedjam/winwork" target="_blank" rel="noreferrer">
@@ -47,7 +47,11 @@ export default function Home() {
           </a>
           <article className="award-card award-finalist">
             <div className="award-medal"><span>2026</span><b>星</b></div>
-            <div className="award-copy"><small>创新赛道 · 入围作品</small><h3>指尖星图游戏创新大赛</h3><p>凭借融合传统棋类直觉与连线机制的原创设计，成功入围赛事评选。</p><strong>入围作品 <i>✦</i></strong></div>
+            <div className="award-copy"><small>创新赛道 · 优秀入围奖</small><h3>指尖星图游戏创新大赛</h3><p>凭借融合传统棋类直觉与连线机制的原创设计，获评赛事优秀入围奖。</p><strong>优秀入围奖 <i>✦</i></strong></div>
+          </article>
+          <article className="award-card award-exhibition award-card-wide">
+            <div className="award-medal"><span>2026</span><b>展</b></div>
+            <div className="award-copy"><small>行业展会 · 现场展出</small><h3>ChinaJoy</h3><p>《举棋不定》亮相 ChinaJoy 现场展区，向玩家展示传统棋类直觉与连线策略融合的独特玩法。</p><strong>ChinaJoy 展出 <i>✦</i></strong></div>
           </article>
         </div>
       </section>
