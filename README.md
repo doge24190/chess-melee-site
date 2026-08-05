@@ -30,3 +30,5 @@ powershell -ExecutionPolicy Bypass -File .\scripts\Sync-ChessMeleeWebsiteRelease
 脚本会从 `TechJoiH/Chess-Melee-Demo` 读取指定正式版本，校验 Windows x64 安装包、更新下载页数据并完成网站测试。通过后再发布网站，并在线确认 `/download` 展示相同版本。
 
 未经过同版本校验的云盘或备用镜像不会展示在下载页，避免用户下载到旧版本。
+
+`.github/workflows/sync-demo-release.yml` 提供手动触发、跨仓库通知和每 30 分钟一次的安全补偿同步。检测到新的已验证正式版后，它会运行同一套校验、提交版本数据，并由 `main` 分支的托管部署更新正式网站。

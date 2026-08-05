@@ -69,11 +69,12 @@ test("server-renders the verified latest Windows release", async () => {
 });
 
 test("keeps release synchronization wired to package scripts and verified metadata", async () => {
-  const [packageJson, releaseData, nodeScript, powershellScript] = await Promise.all([
+  const [packageJson, releaseData, nodeScript, powershellScript, workflow] = await Promise.all([
     readFile(new URL("../package.json", import.meta.url), "utf8").then(JSON.parse),
     readFile(new URL("../data/latest-release.json", import.meta.url), "utf8").then(JSON.parse),
     readFile(new URL("../scripts/sync-latest-release.mjs", import.meta.url), "utf8"),
     readFile(new URL("../scripts/Sync-ChessMeleeWebsiteRelease.ps1", import.meta.url), "utf8"),
+    readFile(new URL("../.github/workflows/sync-demo-release.yml", import.meta.url), "utf8"),
   ]);
 
   assert.equal(packageJson.scripts["release:sync"], "node scripts/sync-latest-release.mjs");
@@ -83,4 +84,7 @@ test("keeps release synchronization wired to package scripts and verified metada
   assert.match(nodeScript, /拒绝将官网.*回退/);
   assert.match(nodeScript, /asset\.digest/);
   assert.match(powershellScript, /npm\.cmd test/);
+  assert.match(workflow, /repository_dispatch:/);
+  assert.match(workflow, /cron: "17,47 \* \* \* \*"/);
+  assert.match(workflow, /permissions:\s+contents: write/);
 });
