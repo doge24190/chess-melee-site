@@ -2,13 +2,13 @@ import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render() {
+async function render(pathname = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request("http://localhost/", {
+    new Request(`http://localhost${pathname}`, {
       headers: { accept: "text/html" },
     }),
     {
@@ -55,4 +55,32 @@ test("keeps the new exhibition card responsive and ships its preview image", asy
   assert.match(layout, /generateMetadata/);
   assert.match(layout, /\/og\.png/);
   await access(new URL("../public/og.png", import.meta.url));
+});
+
+test("server-renders the verified latest Windows release", async () => {
+  const response = await render("/download");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /v0\.1\.3/);
+  assert.match(html, /Chess-Melee-Demo-v0\.1\.3-Windows-x64\.zip/);
+  assert.match(html, /8004d1bb94f7200aa940cf313b5adf486ff94f8881ba7c09adeb516a33bef9c5/);
+  assert.doesNotMatch(html, /v0\.1\.0|lanzout\.com|doge24190\.top/);
+});
+
+test("keeps release synchronization wired to package scripts and verified metadata", async () => {
+  const [packageJson, releaseData, nodeScript, powershellScript] = await Promise.all([
+    readFile(new URL("../package.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../data/latest-release.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../scripts/sync-latest-release.mjs", import.meta.url), "utf8"),
+    readFile(new URL("../scripts/Sync-ChessMeleeWebsiteRelease.ps1", import.meta.url), "utf8"),
+  ]);
+
+  assert.equal(packageJson.scripts["release:sync"], "node scripts/sync-latest-release.mjs");
+  assert.equal(releaseData.tag, "v0.1.3");
+  assert.equal(releaseData.asset.size, 102676139);
+  assert.match(releaseData.asset.sha256, /^[0-9a-f]{64}$/);
+  assert.match(nodeScript, /拒绝将官网.*回退/);
+  assert.match(nodeScript, /asset\.digest/);
+  assert.match(powershellScript, /npm\.cmd test/);
 });
