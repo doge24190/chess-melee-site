@@ -22,7 +22,7 @@ export default function DownloadPage() {
         <div className="download-copy">
           <p className="eyebrow"><span /> CHESS MELEE DEMO · {latestRelease.tag}</p>
           <h1>棋局已开，<br /><em>轮到你了。</em></h1>
-          <p className="download-lede">下载《举棋不定》试玩版，亲手体验落子、移动、召子、抉择与灵魂飞升交织的策略战场。</p>
+          <p className="download-lede">下载《举棋不定》试玩版，体验标准模式的移动与复活，或进入“落子争锋”，用每一次落点直接改变战场。</p>
           <div className="download-meta"><span>Windows x64</span><span>试玩版本</span><span>{latestRelease.tag}</span><span>{assetSizeMb} MB</span></div>
 
           <div className="download-options" aria-label="下载地址">

@@ -57,6 +57,34 @@ test("keeps the new exhibition card responsive and ships its preview image", asy
   await access(new URL("../public/og.png", import.meta.url));
 });
 
+test("server-renders the new placement ruleset launch section", async () => {
+  const response = await render();
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /id="new-mode"/);
+  assert.match(html, /落子争锋/);
+  assert.match(html, /不走子，只争这一落/);
+  assert.match(html, /基础棋落下形成二连/);
+  assert.match(html, /可淘汰敌方或己方非灵魂棋/);
+  assert.match(html, /TechJoiH\/Chess-Melee-Demo#落子争锋完整规则/);
+});
+
+test("keeps the new ruleset section responsive and labels standard-only copy", async () => {
+  const [page, css, download] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../app/download/page.tsx", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(page, /标准模式 · 不只是连成一线/);
+  assert.match(page, /两种规则：标准模式 \/ 落子争锋/);
+  assert.match(css, /\.new-mode\{/);
+  assert.match(css, /@media\(max-width:900px\).*\.new-mode\{grid-template-columns:1fr/);
+  assert.match(css, /@media\(max-width:560px\).*\.new-mode-rules\{grid-template-columns:1fr/);
+  assert.match(download, /体验标准模式的移动与复活/);
+});
+
 test("server-renders the verified latest Windows release", async () => {
   const response = await render("/download");
   assert.equal(response.status, 200);
