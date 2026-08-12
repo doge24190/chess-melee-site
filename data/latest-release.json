@@ -1,12 +1,12 @@
 {
-  "tag": "v0.1.3",
-  "name": "Chess Melee Demo v0.1.3",
-  "publishedAt": "2026-07-31T18:09:01Z",
-  "releaseUrl": "https://github.com/TechJoiH/Chess-Melee-Demo/releases/tag/v0.1.3",
+  "tag": "v0.1.4",
+  "name": "Chess Melee Demo v0.1.4",
+  "publishedAt": "2026-08-12T13:00:56Z",
+  "releaseUrl": "https://github.com/TechJoiH/Chess-Melee-Demo/releases/tag/v0.1.4",
   "asset": {
-    "name": "Chess-Melee-Demo-v0.1.3-Windows-x64.zip",
-    "url": "https://github.com/TechJoiH/Chess-Melee-Demo/releases/download/v0.1.3/Chess-Melee-Demo-v0.1.3-Windows-x64.zip",
-    "size": 102676139,
-    "sha256": "8004d1bb94f7200aa940cf313b5adf486ff94f8881ba7c09adeb516a33bef9c5"
+    "name": "Chess-Melee-Demo-v0.1.4-Windows-x64.zip",
+    "url": "https://github.com/TechJoiH/Chess-Melee-Demo/releases/download/v0.1.4/Chess-Melee-Demo-v0.1.4-Windows-x64.zip",
+    "size": 102688601,
+    "sha256": "a7e487adcff91dfb603b353a538d59201f03d8de395e4ab8fd7842a33b42d2ed"
   }
 }

@@ -62,9 +62,9 @@ test("server-renders the verified latest Windows release", async () => {
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /v0\.1\.3/);
-  assert.match(html, /Chess-Melee-Demo-v0\.1\.3-Windows-x64\.zip/);
-  assert.match(html, /8004d1bb94f7200aa940cf313b5adf486ff94f8881ba7c09adeb516a33bef9c5/);
+  assert.match(html, /v0\.1\.4/);
+  assert.match(html, /Chess-Melee-Demo-v0\.1\.4-Windows-x64\.zip/);
+  assert.match(html, /a7e487adcff91dfb603b353a538d59201f03d8de395e4ab8fd7842a33b42d2ed/);
   assert.doesNotMatch(html, /v0\.1\.0|lanzout\.com|doge24190\.top/);
 });
 
@@ -78,8 +78,8 @@ test("keeps release synchronization wired to package scripts and verified metada
   ]);
 
   assert.equal(packageJson.scripts["release:sync"], "node scripts/sync-latest-release.mjs");
-  assert.equal(releaseData.tag, "v0.1.3");
-  assert.equal(releaseData.asset.size, 102676139);
+  assert.equal(releaseData.tag, "v0.1.4");
+  assert.equal(releaseData.asset.size, 102688601);
   assert.match(releaseData.asset.sha256, /^[0-9a-f]{64}$/);
   assert.match(nodeScript, /拒绝将官网.*回退/);
   assert.match(nodeScript, /asset\.digest/);
